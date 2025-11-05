@@ -35,9 +35,10 @@ rule all:
     input:
         #expand(f"{METAPG_OUT}/{{pang_folder}}_counts/{{metag}}.k21.csv", pang_folder=pang_folders, metag=WORT_METAG),
         #expand(f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.pang.zip", pang_folder=pang_folders),
-        expand(f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k31.zip", pang_folder=pang_folders),
+        expand(f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k31.pang.zip", pang_folder=pang_folders),
  
 # We have species dbs for the MAGS + GTDB. Easier to pull out a spp lvl sketch
+# @ANNIE k21 sketch much smaller than k31, check this. 
 rule sig_grep_maggtdb:
     output:
         sig_gtdb_mags_k21 = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k21.zip",
@@ -45,34 +46,20 @@ rule sig_grep_maggtdb:
     conda: "branchwater-skipmer"
     threads: 1
     params:
-            exact_name=lambda w: get_species(w.pang_folder)
+            species_name=lambda w: get_species(w.pang_folder),
+            exact_name=lambda w: get_exact_name(w.pang_folder)
     shell:
         """
-        sourmash sig grep -k 21 -i '{params.exact_name}' {GTDB_MAGS_K21} -o {output.sig_gtdb_mags_k21} && \
+        sourmash sig grep -k 21 -i '{params.species_name}' {GTDB_MAGS_K21} -o {output.sig_gtdb_mags_k21} && \
         sourmash sig grep -k 31 -i '{params.exact_name}' {GTDB_MAGS_K31} -o {output.sig_gtdb_mags_k31} 
         """
 
-# # Need a spp level sketch for all species only in GTDB too.
-# # So we can compare if our novel MAGs add stuff
-# rule sig_grep_gtdb:
-#     output:
-#         sig_gtdb_k21 = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.zip",
-#     conda: "branchwater-skipmer"
-#     threads: 1
-#     params:
-#             species_name=lambda w: get_species(w.pang_folder)
-#     shell:
-#         """
-#         sourmash sig grep -k 21 -i '{params.species_name}' {GTDB_K21} -o {output.sig_gtdb_k21} && \
-#         sourmash sig grep -k 31 -i '{params.species_name}' {GTDB_K31} -o {output.sig_gtdb_k31} 
-#         """
 
-# Now gtdb, either make a new spp db or just pull then merge
-# # Get MAGs from specific speices 
+# get gtdb species db to compare 
 rule get_species_gtdb:
     output:
-        csvgtdb = f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}xgtdb.csv",
-        sig_gtdb_k21 = f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.zip",
+        csvgtdb = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}xgtdb.csv",
+        sig_gtdb_k21 = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.zip",
         sig_gtdb_k31 = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k31.zip",
     conda:
         "branchwater-skipmer"
@@ -89,18 +76,20 @@ rule get_species_gtdb:
 # merge the gtdb output into a pangenome  sketch
 rule pangenome_merge:
     input:
-        sig=f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.zip"
+        sig_gtdb_k21 = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.zip",
+        sig_gtdb_k31 = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k31.zip"
     output:
-        merged=f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.pang.zip",
+        merged_k21=f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.pang.zip",
+        merged_k31=f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k31.pang.zip",
+    conda:
+        "pangenomics_dev"
     shell:
         """ 
-        sourmash scripts pangenome_merge {input.sig} -k 21 \
-        -o {output.merged} --scaled 1000 
+        sourmash scripts pangenome_merge {input.sig_gtdb_k21} -k 21 -o {output.merged_k21} --scaled 1000 && \
+        sourmash scripts pangenome_merge {input.sig_gtdb_k31} -k 31 -o {output.merged_k31} --scaled 1000
         """
-        
 
-
-
+# Compare the sketches
 # rule sum_hashes_found:
 #     input:
 #         rankt = f"{METAPG_OUT}/ranktables/{{pang_folder}}.rankt.k21.csv",

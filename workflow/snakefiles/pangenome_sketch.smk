@@ -54,7 +54,6 @@ rule sig_grep_maggtdb:
         sourmash sig grep -k 31 -i '{params.exact_name}' {GTDB_MAGS_K31} -o {output.sig_gtdb_mags_k31} 
         """
 
-
 # get gtdb species db to compare 
 rule get_species_gtdb:
     output:

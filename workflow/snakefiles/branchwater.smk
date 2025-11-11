@@ -22,7 +22,7 @@ def get_exact_name(pang_folder):
 
 rule all:
     input:
-        expand(f"{BRANCHW_OUT}/{{pang_folder}}.gtdb+mags.k21.csv", pang_folder=pang_folders),
+        expand(f"{BRANCHW_OUT}/{{pang_folder}}.gtdb.k21.csv", pang_folder=pang_folders),
  
 
 rule pangenome_merge:
@@ -40,11 +40,22 @@ rule pangenome_merge:
         sourmash scripts pangenome_merge {input.sig_gtdb_k31} -k 31 -o {output.merged_k31} --scaled 1000
         """
 
-rule branchwater_corehash:
+rule branchwater:
     input:
         sig = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k21.sig",
     output:
         csv = f"{BRANCHW_OUT}/{{pang_folder}}.gtdb+mags.k21.csv",
+    conda: "branchwater"
+    threads: 1
+    shell:
+        """
+        branchwater-client --full --sig {input.sig} -o {output.csv} --retry 10
+        """
+rule branchwater_gtdb:
+    input:
+        sig = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.pang.sig",
+    output:
+        csv = f"{BRANCHW_OUT}/{{pang_folder}}.gtdb.k21.csv",
     conda: "branchwater"
     threads: 1
     shell:

@@ -101,6 +101,9 @@ rule symlink_MAGs:
         touch {output.check}
         """
 
+
+
+
 # run protein prediction
 # prodigal or prokka
 rule prokka:
@@ -114,16 +117,19 @@ rule prokka:
     threads: 1
     params:
         input_folder=f"{OUTPUT_DIR}/{{pang_folder}}/MAGs",
+        done_folder = f"{OUTPUT_DIR}/{{pang_folder}}/MAGs/done",
         output_folder=f"{OUTPUT_DIR}/{{pang_folder}}/prokka"
     shell:
         """
+        mkdir -p {params.done_folder}
         mkdir -p {params.output_folder}
         for f in {params.input_folder}/*.fasta; do
             base=$(basename "$f" .fasta)
             prokka --kingdom Bacteria \
                 --outdir {params.output_folder}/$base \
                 --norrna --notrna --prefix $base --force \
-                --locustag $base "$f"
+                --locustag $base "$f" && \
+                mv $f {params.done_folder}
         done
         touch {output.check}
         """

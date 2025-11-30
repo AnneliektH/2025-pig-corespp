@@ -2,3 +2,4 @@ results
 resources
 workflow/.snakemake/*
 aggregated_taxonomy_summary.csv
+workflow/2025-sourmash-gather-to-vec

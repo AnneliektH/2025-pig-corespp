@@ -42,7 +42,7 @@ rule all:
     input:
         # expand(f"{OUTPUT_DIR}/{{pang_folder}}/check/symlink_v3.check", pang_folder=pang_folders),
         # expand(f"{OUTPUT_DIR}/{{pang_folder}}/fasta/{{pang_folder}}.gtdb.zip", pang_folder=pang_folders),
-        expand(f"{OUTPUT_DIR}/{{pang_folder}}/check/prokka.done", pang_folder=pang_folders),
+        expand(f"{OUTPUT_DIR}/{{pang_folder}}/check/fetchmg.done", pang_folder=pang_folders),
 
 # Get MAGs from specific speices 
 rule get_species_mags:
@@ -100,11 +100,6 @@ rule symlink_MAGs:
         python scripts/create_symlink_midgie.py {params.output_folder} {MIDGIE_RENAME} {input.csv} && \
         touch {output.check}
         """
-
-
-
-
-# run protein prediction
 # prodigal or prokka
 rule prokka:
     input:
@@ -129,6 +124,32 @@ rule prokka:
                 --outdir {params.output_folder}/$base \
                 --norrna --notrna --prefix $base --force \
                 --locustag $base "$f" && \
+                mv $f {params.done_folder}
+        done
+        touch {output.check}
+        """
+
+rule fetch_mg:
+    input:
+        csv = f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}xdirectsketch.csv",
+        check = f"{OUTPUT_DIR}/{{pang_folder}}/check/symlink_v3.check",
+    output:
+        check = f"{OUTPUT_DIR}/{{pang_folder}}/check/fetchmg.done",
+    conda: 
+        "fetch_mgs"
+    threads: 12
+    params:
+        input_folder=f"{OUTPUT_DIR}/{{pang_folder}}/MAGs",
+        done_folder = f"{OUTPUT_DIR}/{{pang_folder}}/MAGs/done",
+        output_folder=f"{OUTPUT_DIR}/{{pang_folder}}/fetch_mg"
+    shell:
+        """
+        mkdir -p {params.done_folder}
+        mkdir -p {params.output_folder}
+        for f in {params.input_folder}/*.fasta; do
+            base=$(basename "$f" .fasta)
+            /home/amhorst/.local/bin/fetchMGs extraction \
+                -t {threads} "$f" "genome" {params.output_folder}/$base && \
                 mv $f {params.done_folder}
         done
         touch {output.check}

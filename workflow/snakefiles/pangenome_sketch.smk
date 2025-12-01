@@ -18,8 +18,8 @@ import glob, os
 GTDB_K31 = '/group/ctbrowngrp/sourmash-db/gtdb-rs226/gtdb-rs226.k31.sig.zip'
 GTDB_TAX  = '../resources/gtdb-rs226.lineages.csv'
 MAG_TAX = '../resources/bin-sketches.lineages.csv'
-GTDB_MAGS_K31 = '/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/rename/gtdb+bins.species.sig.zip'
-GTDB_MAGS_K21 = '/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/rename/gtdb+bins.species.k21.sig.zip'
+GTDB_MAGS_K31 = '/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/host/clean-gtdb+bins.species.k31.sig.zip'
+GTDB_MAGS_K21 = '/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/host/clean-gtdb+bins.species.k21.sig.zip'
 GTDB_K21 = '/group/ctbrowngrp/sourmash-db/gtdb-rs226/gtdb-rs226.k21.sig.zip'
 SCALED = 1000
 OUTPUT_DIR = "/group/ctbrowngrp2/amhorst/2025-pig-corespp/results/branchwater"
@@ -29,7 +29,7 @@ WORT_METAG = pd.read_csv("../resources/metag-wort-hq.3217.txt", usecols=[0], hea
 
 
 # Load pang_org list
-pang_df = pd.read_csv("../resources/pang_df.tsv", sep='\t')  # Only needs 'pang_org' column
+pang_df = pd.read_csv("../resources/pang_df_exEcoli.tsv", sep='\t')  # Only needs 'pang_org' column
 
 # Create pang_folder by replacing spaces with underscores
 pang_df["pang_folder"] = pang_df["pang_org"].str.replace(" ", "_")
@@ -46,14 +46,14 @@ def get_exact_name(pang_folder):
 rule all:
     input:
         #expand(f"{METAPG_OUT}/{{pang_folder}}_counts/{{metag}}.k21.csv", pang_folder=pang_folders, metag=WORT_METAG),
-        #expand(f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.pang.zip", pang_folder=pang_folders),
+        expand(f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.pang.zip", pang_folder=pang_folders),
+        expand(f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k21.zip", pang_folder=pang_folders),
         expand(f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.sizes.tsv", pang_folder=pang_folders),
  
 
-
 # We have species dbs for the MAGS + GTDB. Easier to pull out a spp lvl sketch
 rule sig_grep_maggtdb:
-    output:
+    output: 
         sig_gtdb_mags_k21 = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k21.zip",
         sig_gtdb_mags_k31 = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k31.zip",
     conda: "branchwater-skipmer"
@@ -66,6 +66,8 @@ rule sig_grep_maggtdb:
         sourmash sig grep -k 21 -i '{params.species_name}' {GTDB_MAGS_K21} -o {output.sig_gtdb_mags_k21} && \
         sourmash sig grep -k 31 -i '{params.exact_name}' {GTDB_MAGS_K31} -o {output.sig_gtdb_mags_k31} 
         """
+
+
 
 # get gtdb species db to compare 
 rule get_species_gtdb:
@@ -213,3 +215,5 @@ rule aggregate_hash_sizes:
 #         """
 #         sourmash sig merge {input.sig_own_k31} {input.sig_gtdb_k31} -k 31 -o {output.merge}
 #         """
+
+# get gtdb species db to compare 

@@ -11,7 +11,7 @@ MAG_TAX = '/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/rename/bin-s
 MIDGIE_RENAME = '/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/rename/manysketch-renamed.csv'
 # KSIZE = 31 
 SCALED = 1000
-OUTPUT_DIR = "/group/ctbrowngrp2/amhorst/2025-pig-corespp/results/functional_profile_corespp"
+OUTPUT_DIR = "/group/ctbrowngrp2/amhorst/2025-pig-corespp/results/single_copy_genes"
 MAG_LOCATION = "/group/ctbrowngrp2/scratch/annie/2023-swine-sra/results/MAGs/genomes/all_genomes/"
 
 #genomes_all = glob_wildcards(f"{OUTPUT_DIR}/{{pang_folder}}/MAGs/{{sample}}.fasta").sample
@@ -43,7 +43,6 @@ rule all:
         # expand(f"{OUTPUT_DIR}/{{pang_folder}}/check/symlink_v3.check", pang_folder=pang_folders),
         # expand(f"{OUTPUT_DIR}/{{pang_folder}}/fasta/{{pang_folder}}.gtdb.zip", pang_folder=pang_folders),
         expand(f"{OUTPUT_DIR}/{{pang_folder}}/check/fetchmg.done", pang_folder=pang_folders),
-
 # Get MAGs from specific speices 
 rule get_species_mags:
     output:
@@ -77,7 +76,7 @@ rule get_MAGS:
         """
         python scripts/create_acc.py {input.csv} {output.csv} && \
         sourmash scripts gbsketch  --keep-fasta --genomes-only \
-        {output.csv} -o {output.sig} -p dna,k=21,k=31,scaled=100,abund \
+        {output.csv} -o {output.sig} -p dna,k=21,k=31,scaled=1000,abund \
         -f {params.output_folder} -k -c {threads} -n 5 \
         --failed {output.failed_test} -r 5 --checksum-fail {output.fail_checksum}
         for f in {params.output_folder}/*.fna.gz; do

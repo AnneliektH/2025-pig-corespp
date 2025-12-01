@@ -22,22 +22,22 @@ def get_exact_name(pang_folder):
 
 rule all:
     input:
-        expand(f"{BRANCHW_OUT}/{{pang_folder}}.gtdb.k21.csv", pang_folder=pang_folders),
+        expand(f"{BRANCHW_OUT}/{{pang_folder}}.gtdb+mags.k21.csv", pang_folder=pang_folders),
  
 
 rule pangenome_merge:
     input:
         sig_gtdb_k21 = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.zip",
-        sig_gtdb_k31 = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k31.zip"
+        sig_gtdbmag_k21 = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k21.zip"
     output:
-        merged_k21=f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.pang.sig",
-        merged_k31=f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k31.pang.sig",
+        merged_gtdb_k21=f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.pang.sig",
+        merged_gtdbmag_k21=f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k21.sig",
     conda:
         "pangenomics_dev"
     shell:
         """ 
-        sourmash scripts pangenome_merge {input.sig_gtdb_k21} -k 21 -o {output.merged_k21} --scaled 1000 && \
-        sourmash scripts pangenome_merge {input.sig_gtdb_k31} -k 31 -o {output.merged_k31} --scaled 1000
+        sourmash scripts pangenome_merge {input.sig_gtdb_k21} -k 21 -o {output.merged_gtdb_k21} --scaled 1000 && \
+        sourmash scripts pangenome_merge {input.sig_gtdbmag_k21} -k 21 -o {output.merged_gtdbmag_k21} --scaled 1000
         """
 
 rule branchwater:
@@ -51,6 +51,7 @@ rule branchwater:
         """
         branchwater-client --full --sig {input.sig} -o {output.csv} --retry 10
         """
+
 rule branchwater_gtdb:
     input:
         sig = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.pang.sig",

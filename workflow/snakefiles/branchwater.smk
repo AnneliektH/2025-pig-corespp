@@ -49,7 +49,7 @@ rule branchwater:
     threads: 1
     shell:
         """
-        branchwater-client --full --sig {input.sig} -o {output.csv} --retry 10
+        branchwater-client --full --sig {input.sig} -o {output.csv} --retry 15
         """
 
 rule branchwater_gtdb:

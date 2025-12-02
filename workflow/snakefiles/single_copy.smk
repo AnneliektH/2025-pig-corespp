@@ -9,8 +9,10 @@ GTDB_K31 = '/group/ctbrowngrp/sourmash-db/gtdb-rs226/gtdb-rs226.k31.sig.zip'
 GTDB_TAX  = '/group/ctbrowngrp/sourmash-db/gtdb-rs226/gtdb-rs226.lineages.csv'
 MAG_TAX = '/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/rename/bin-sketches.lineages.csv'
 MIDGIE_RENAME = '/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/rename/manysketch-renamed.csv'
+MGLIST = '/group/ctbrowngrp2/amhorst/2025-pigparadigm/resources/3217_metag.txt'
 # KSIZE = 31 
 SCALED = 1000
+
 OUTPUT_DIR = "/group/ctbrowngrp2/amhorst/2025-pig-corespp/results/single_copy_genes"
 MAG_LOCATION = "/group/ctbrowngrp2/scratch/annie/2023-swine-sra/results/MAGs/genomes/all_genomes/"
 
@@ -42,7 +44,8 @@ rule all:
     input:
         # expand(f"{OUTPUT_DIR}/{{pang_folder}}/check/symlink_v3.check", pang_folder=pang_folders),
         # expand(f"{OUTPUT_DIR}/{{pang_folder}}/fasta/{{pang_folder}}.gtdb.zip", pang_folder=pang_folders),
-        expand(f"{OUTPUT_DIR}/{{pang_folder}}/check/fetchmg.done", pang_folder=pang_folders),
+        expand(f"{OUTPUT_DIR}/{{pang_folder}}/check/prokka.done", pang_folder=pang_folders),
+
 # Get MAGs from specific speices 
 rule get_species_mags:
     output:
@@ -110,8 +113,8 @@ rule prokka:
         "prokka"
     threads: 1
     params:
-        input_folder=f"{OUTPUT_DIR}/{{pang_folder}}/MAGs",
-        done_folder = f"{OUTPUT_DIR}/{{pang_folder}}/MAGs/done",
+        input_folder=f"{OUTPUT_DIR}/{{pang_folder}}/MAGs/done",
+        done_folder = f"{OUTPUT_DIR}/{{pang_folder}}/MAGs",
         output_folder=f"{OUTPUT_DIR}/{{pang_folder}}/prokka"
     shell:
         """
@@ -154,22 +157,48 @@ rule fetch_mg:
         touch {output.check}
         """
 
-# # # sketch the proteins
-# rule sketch_protein:
-#     input:
-#         check = f"{OUTPUT_DIR}/{pang_name_out}/check/{{genome}}.prokka.done",
-#     output:
-#         check = f"{OUTPUT_DIR}/{pang_name_out}/sourmash/protein/{{genome}}.prokka.done",
-#     params:
-#         prokka_folder=f"{OUTPUT_DIR}/{pang_name_out}/prokka/{{genome}}"
-#     conda: 
-#         "branchwater"
-#     threads: 1
-#     shell:
-#         """ 
-#         sourmash sketch protein
-#         """
-#  -k 11 --scaled 1000 -o {output.sig} {input.faa}
+# agg the .fna files from fetchmgs
+rule aggregate_fna:
+    input:
+        done = f"{OUTPUT_DIR}/{{pang_folder}}/check/fetchmg.done",
+    output:
+        aggregated = f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}.SCG.fna",
+    shell:
+        r"""
+        find {OUTPUT_DIR}/{wildcards.pang_folder}/fetch_mg -type f -name "*.fna" \
+            -exec cat {{}} + > {output.aggregated}
+        """
+
+
+# # sketch the single copy genes
+rule sketch_scg:
+    input:
+        fna = f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}.SCG.fna",
+    output:
+        sig = f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}.SCG.k31.sig",
+    conda: 
+        "branchwater"
+    threads: 1
+    shell:
+        """ 
+        sourmash sketch dna -o {output.sig} {input.fna}
+        """
+ 
+
+ # manysearch x metagenomes
+rule manysearch:
+    input:
+        sig = f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}.SCG.k31.zip",
+    output:
+        csv = f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}.SCG.k31.manysearch.csv",
+    conda: 
+        "branchwater"
+    threads: 40
+    shell:
+        """ 
+        sourmash scripts manysearch {MGLIST} {input.sig} -o {output.csv} -c {threads} -t 0
+        """
+ 
 
 # # use colton script for funprofiler
 # rule funcprofiler_MAGs:

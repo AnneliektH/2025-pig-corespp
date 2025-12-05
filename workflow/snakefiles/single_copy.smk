@@ -131,6 +131,8 @@ rule prokka:
         touch {output.check}
         """
 
+
+
 rule fetch_mg:
     input:
         csv = f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}xdirectsketch.csv",
@@ -158,6 +160,7 @@ rule fetch_mg:
         """
 
 # agg the .fna files from fetchmgs
+# this is wrong. Should be .fetchMGs.fna otherwise all cds
 rule aggregate_fna:
     input:
         done = f"{OUTPUT_DIR}/{{pang_folder}}/check/fetchmg.done",
@@ -165,7 +168,7 @@ rule aggregate_fna:
         aggregated = f"{OUTPUT_DIR}/{{pang_folder}}/{{pang_folder}}.SCG.fna",
     shell:
         r"""
-        find {OUTPUT_DIR}/{wildcards.pang_folder}/fetch_mg -type f -name "*.fna" \
+        find {OUTPUT_DIR}/{wildcards.pang_folder}/fetch_mg -type f -name "*.fetchMGs.fna" \
             -exec cat {{}} + > {output.aggregated}
         """
 

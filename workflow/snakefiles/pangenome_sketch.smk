@@ -46,9 +46,9 @@ def get_exact_name(pang_folder):
 rule all:
     input:
         #expand(f"{METAPG_OUT}/{{pang_folder}}_counts/{{metag}}.k21.csv", pang_folder=pang_folders, metag=WORT_METAG),
-        expand(f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k21.pang.zip", pang_folder=pang_folders),
-        expand(f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k21.zip", pang_folder=pang_folders),
-        expand(f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.sizes.tsv", pang_folder=pang_folders),
+        expand(f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k31.rn.pang.sig", pang_folder=pang_folders),
+        #expand(f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k31.sig", pang_folder=pang_folders),
+       # expand(f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.sizes.tsv", pang_folder=pang_folders),
  
 
 # We have species dbs for the MAGS + GTDB. Easier to pull out a spp lvl sketch
@@ -67,7 +67,35 @@ rule sig_grep_maggtdb:
         sourmash sig grep -k 31 -i '{params.exact_name}' {GTDB_MAGS_K31} -o {output.sig_gtdb_mags_k31} 
         """
 
+rule pangenome_merge_k31:
+    input:
+        sig_gtdb_k21 = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k31.zip",
+        sig_gtdbmag_k21 = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k31.zip"
+    output:
+        merged_gtdb_k21=f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k31.pang.sig",
+        merged_gtdbmag_k21=f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k31.sig",
+    conda:
+        "pangenomics_dev"
+    shell:
+        """ 
+        sourmash scripts pangenome_merge {input.sig_gtdb_k21} -k 31 -o {output.merged_gtdb_k21} --scaled 1000 && \
+        sourmash scripts pangenome_merge {input.sig_gtdbmag_k21} -k 31 -o {output.merged_gtdbmag_k21} --scaled 1000
+        """
 
+rule sigrename:
+    input:
+        sig_gtdb = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k31.pang.sig",
+        sig_gtdbmag = f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k31.sig"
+    output:
+        rn_gtdb=f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb.k31.rn.pang.sig",
+        rn_gtdbmag=f"{PANG_OUT}/{{pang_folder}}/{{pang_folder}}.gtdb+mags.k31.rn.sig",
+    conda:
+        "pangenomics_dev"
+    shell:
+        """ 
+        sourmash sig rename {input.sig_gtdb} {wildcards.pang_folder} -o {output.rn_gtdb} && \
+        sourmash sig rename {input.sig_gtdbmag} {wildcards.pang_folder} -o {output.rn_gtdbmag} 
+        """
 
 # get gtdb species db to compare 
 rule get_species_gtdb:

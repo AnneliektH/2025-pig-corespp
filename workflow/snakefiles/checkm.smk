@@ -18,7 +18,7 @@ OUTPUT_DIR = "/group/ctbrowngrp2/amhorst/2025-pig-corespp/results/checkm"
 
 
 # Load pang_org list
-pang_df = pd.read_csv("../resources/pang_df_2.tsv", sep='\t')  # Only needs 'pang_org' column
+pang_df = pd.read_csv("../resources/pang_df_exEcoli.tsv", sep='\t')  # Only needs 'pang_org' column
 
 # Create pang_folder by replacing spaces with underscores
 pang_df["pang_folder"] = pang_df["pang_org"].str.replace(" ", "_")
@@ -52,7 +52,7 @@ rule checkm:
         check = f"{OUTPUT_DIR}/{{pang_folder}}/checkm.done",
     conda: 
         "checkM"
-    threads: 16
+    threads: 48
     params:
         input_folder=f"{MAG_DIR}/{{pang_folder}}/MAGs",
         output_folder=f"{OUTPUT_DIR}/{{pang_folder}}"
@@ -73,7 +73,7 @@ rule checkm_qa:
         csv = f"{OUTPUT_DIR}/{{pang_folder}}/checkm_qa.out8.csv",
     conda: 
         "checkM"
-    threads: 16
+    threads: 48
     params:
         input_folder=f"{OUTPUT_DIR}/{{pang_folder}}"
     shell:

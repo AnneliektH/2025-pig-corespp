@@ -1,0 +1,727 @@
+organism	bioproject	count	manual_cur
+gut metagenome	PRJEB39223	5428	human
+metagenome	PRJNA1004982	4363	human
+metagenome	PRJEB22062	3670	pig or chicken
+gut metagenome	PRJEB26961	3231	pig
+metagenome	PRJNA943687	3101	human
+feces metagenome	PRJEB58441	2845	other
+gut metagenome	PRJNA217052	2534	human
+metagenome	PRJNA758252	2529	human
+metagenome	PRJEB28097	2176	human
+feces metagenome	PRJNA763692	1858	human
+gut metagenome	PRJEB8094	1844	human
+gut metagenome	PRJNA528511	1803	human
+gut metagenome	PRJNA1139229	1774	human
+gut metagenome	PRJNA820119	1617	human
+feces metagenome	PRJNA1130110	1583	human
+gut metagenome	PRJEB24041	1581	human
+gut metagenome	PRJEB14847	1535	human
+metagenome	PRJNA686265	1426	human
+metagenome	PRJNA685797	1358	human
+feces metagenome	PRJEB39685	1269	pig/other
+metagenome	PRJNA682246	1264	human
+feces metagenome	PRJNA779106	1236	pig/other
+metagenome	PRJNA999635	1224	human
+gut metagenome	PRJNA259274	1224	primate
+feces metagenome	PRJNA915251	1219	human
+metagenome	PRJEB62817	1153	human
+gut metagenome	PRJNA613947	1099	human
+gut metagenome	PRJNA728374	988	human
+metagenome	PRJNA995807	962	human
+feces metagenome	PRJNA491335	956	human
+feces metagenome	PRJEB30834	942	human
+feces metagenome	PRJNA769968	942	human
+gut metagenome	PRJNA945408	936	human
+unidentified	PRJEB40383	922	human or animal
+metagenome	PRJNA755324	916	human
+metagenome	PRJEB15179	914	human
+metagenome	PRJEB70508	889	human
+metagenome	PRJEB51501	824	other
+gut metagenome	PRJNA1177009	809	human
+gut metagenome	PRJNA1148078	776	human
+feces metagenome	PRJNA662107	743	human
+metagenome	PRJNA824667	730	other
+gut metagenome	PRJNA494875	713	pig
+gut metagenome	PRJEB32631	709	human
+metagenome	PRJEB26357	704	human
+feces metagenome	PRJNA528960	694	human
+metagenome	PRJEB6337	677	human
+feces metagenome	PRJNA1006089	676	human
+metagenome	PRJEB39500	658	human
+metagenome	PRJNA716780	654	human
+feces metagenome	PRJNA650228	650	human
+metagenome	PRJEB14155	638	other
+bacterium	PRJEB20308	628	dog/human/mice/pig
+gut metagenome	PRJNA412411	619	human
+gut metagenome	PRJNA1096289	608	human
+metagenome	PRJNA634666	587	human
+gut metagenome	PRJNA994318	586	human
+metagenome	PRJNA728908	582	human
+gut metagenome	PRJNA758208	582	human
+gut metagenome	PRJNA904924	580	human
+feces metagenome	PRJEB29127	579	human
+metagenome	PRJNA890008	560	human
+metagenome	PRJEB47458	537	human
+gut metagenome	PRJEB34871	527	human
+gut metagenome	PRJEB32496	520	pig/other
+gut metagenome	PRJNA703757	517	human
+metagenome	PRJNA675598	512	human
+gut metagenome	PRJNA686835	512	human
+feces metagenome	PRJEB59119	504	pig/other
+feces metagenome	PRJNA741822	500	human
+gut metagenome	PRJNA862077	497	human
+metagenome	PRJEB40095	495	mouse
+gut metagenome	PRJNA1082665	491	other
+feces metagenome	PRJEB32834	473	human
+gut metagenome	PRJEB40628	461	human
+gut metagenome	PRJNA1082632	459	human
+metagenome	PRJEB13870	435	human
+metagenome	PRJNA692042	428	primate
+metagenome	PRJNA1165922	425	human
+metagenome	PRJNA1164203	417	
+gut metagenome	PRJNA668357	415	human
+gut metagenome	PRJEB42363	402	human
+gut metagenome	PRJNA849338	400	other
+feces metagenome	PRJEB29373	396	human
+feces metagenome	PRJEB37731	396	human
+metagenome		393	
+gut metagenome	PRJNA644666	376	human
+metagenome	PRJNA911205	369	
+gut metagenome	PRJEB25008	366	human
+gut metagenome	PRJNA485056	362	human
+metagenome	PRJNA860656	359	
+gut metagenome	PRJEB28237	350	
+metagenome	PRJEB35816	349	human
+gut metagenome	PRJEB23010	349	other
+metagenome	PRJEB62878	348	pig/other
+gut metagenome	PRJEB43044	345	
+gut metagenome	PRJNA1102664	339	pig
+metagenome	PRJNA821237	338	
+metagenome	PRJNA739170	333	
+feces metagenome	PRJNA722129	327	human
+gut metagenome	PRJNA454826	326	
+gut metagenome	PRJNA375935	324	
+metagenome	PRJNA625520	320	human
+gut metagenome	PRJNA739008	320	human
+gut metagenome	PRJNA762360	320	
+metagenome	PRJNA739858	317	
+metagenome	PRJNA928744	316	human
+metagenome	PRJNA526405	315	pig
+gut metagenome	PRJNA656389	313	other
+gut metagenome	PRJNA514108	309	
+gut metagenome	PRJNA706060	305	
+gut metagenome	PRJEB22973	303	human
+gut metagenome	PRJNA421881	301	human
+gut metagenome	PRJNA872328	301	human
+metagenome	PRJEB34736	301	pig
+metagenome	PRJNA768409	301	
+metagenome	PRJNA624763	300	
+unidentified	PRJEB12458	299	pig
+gut metagenome	PRJNA706116	299	
+gut metagenome	PRJNA589622	295	
+metagenome	PRJNA698459	294	
+metagenome	PRJEB45815	287	
+feces metagenome	PRJEB22175	285	human
+metagenome	PRJNA944403	281	
+feces metagenome	PRJNA347511	280	human
+gut metagenome	PRJEB33013	279	
+gut metagenome	PRJEB50568	272	human
+metagenome	PRJNA699281	271	
+gut metagenome	PRJNA647523	268	
+feces metagenome	PRJNA539933	263	human
+feces metagenome	PRJNA811727	262	human
+feces metagenome	PRJNA773596	261	human
+feces metagenome	PRJNA782533	261	human
+metagenome	PRJEB45443	261	
+gut metagenome	PRJNA835516	259	
+feces metagenome	PRJNA613834	256	human
+metagenome	PRJNA885137	255	
+gut metagenome	PRJNA931814	255	
+metagenome	PRJEB28384	255	
+feces metagenome	PRJNA393237	254	human
+gut metagenome	PRJEB72433	251	
+gut metagenome	PRJNA954584	247	
+metagenome	PRJEB40995	245	
+gut metagenome	PRJNA938297	243	
+metagenome	PRJNA841806	241	human
+gut metagenome	PRJNA873083	240	
+feces metagenome	PRJNA818062	235	human
+gut metagenome	PRJNA433459	234	
+feces metagenome	PRJNA1163957	233	pig
+metagenome	PRJEB25954	233	
+gut metagenome	PRJNA649273	233	
+manure metagenome	PRJNA737271	232	pig
+gut metagenome	PRJNA1138429	230	
+feces metagenome	PRJNA432958	225	human
+gut metagenome	PRJNA844237	225	pig
+metagenome	PRJNA684454	225	
+unidentified	PRJEB12466	219	
+gut metagenome	PRJNA1002577	218	human
+gut metagenome	PRJNA918651	209	
+gut metagenome	PRJNA504891	209	
+gut metagenome	PRJNA1008138	208	human
+metagenome	PRJEB48897	208	
+metagenome	PRJNA824068	205	
+gut metagenome	PRJNA894204	205	
+gut metagenome	PRJNA745329	199	
+metagenome	PRJNA453374	199	
+metagenome	PRJNA813705	197	
+feces metagenome	PRJNA562600	196	human
+metagenome	PRJNA1063508	193	
+gut metagenome	PRJNA635116	192	
+metagenome	PRJEB38000	190	human
+metagenome	PRJEB49428	190	human
+metagenome	PRJNA494824	189	
+gut metagenome	PRJNA768298	188	
+metagenome	PRJNA928211	188	
+metagenome	PRJNA1137832	187	other
+metagenome	PRJNA734720	187	other
+feces metagenome	PRJNA598414	186	pig/other
+gut metagenome	PRJNA612291	186	
+metagenome	PRJNA939514	180	human
+metagenome	PRJNA1079906	180	
+gut metagenome	PRJNA995885	179	
+gut metagenome	PRJEB25514	178	
+metagenome	PRJEB31298	177	
+metagenome	PRJNA678871	176	
+gut metagenome	PRJNA637878	174	
+metagenome	PRJEB47975	172	
+metagenome	PRJNA1112983	171	
+gut metagenome	PRJNA1029994	169	
+metagenome	PRJNA827603	169	
+feces metagenome	PRJNA770101	165	human
+metagenome	PRJEB17643	164	
+metagenome	PRJNA685168	160	
+gut metagenome	PRJEB22765	159	other
+metagenome	PRJNA546227	159	
+feces metagenome	PRJNA913183	158	human
+feces metagenome	PRJNA728379	158	pig
+metagenome	PRJEB51056	158	
+feces metagenome	PRJNA796172	151	pig
+metagenome	PRJNA877821	151	
+feces metagenome	PRJNA757579	150	
+gut metagenome	PRJNA1121295	148	
+gut metagenome	PRJNA853814	147	
+gut metagenome	PRJNA645414	147	
+gut metagenome	PRJEB1690	145	
+gut metagenome	PRJEB45397	145	
+manure metagenome	PRJNA633392	142	pig
+feces metagenome	PRJNA801645	142	pig
+gut metagenome	PRJNA1007579	142	
+gut metagenome	PRJNA626477	142	
+gut metagenome	PRJNA892768	141	other
+metagenome	PRJNA1135155	140	
+feces metagenome	PRJNA541083	138	human
+gut metagenome	PRJNA1101587	138	
+gut metagenome	PRJNA942468	137	
+feces metagenome	PRJNA951897	136	pig
+metagenome	PRJNA939026	136	
+metagenome	PRJEB13833	134	
+metagenome	PRJNA886719	133	
+metagenome	PRJNA1025926	133	
+feces metagenome	PRJNA1148628	132	human
+metagenome	PRJNA529503	132	pig
+metagenome	PRJNA810575	131	
+metagenome	PRJNA763503	131	
+gut metagenome	PRJNA769489	130	
+gut metagenome	PRJNA647157	128	pig
+gut metagenome	PRJNA942432	128	pig
+metagenome	PRJNA1035800	128	
+feces metagenome	PRJNA574851	125	other
+metagenome	PRJNA399742	125	
+gut metagenome	PRJNA948536	123	
+metagenome	PRJEB47445	123	
+feces metagenome	PRJNA1065277	122	human
+gut metagenome	PRJNA760651	121	pig
+metagenome	PRJEB21168	121	pig-associated
+metagenome	PRJNA816841	121	
+gut metagenome	PRJNA849795	119	
+gut metagenome	PRJNA944152	118	
+metagenome	PRJNA757365	118	
+gut metagenome	PRJNA529487	118	
+feces metagenome	PRJNA663646	116	human
+metagenome	PRJNA615114	116	
+gut metagenome	PRJNA661048	115	
+metagenome	PRJEB28815	114	
+gut metagenome	PRJNA1111312	114	
+metagenome	PRJEB52881	114	
+metagenome	PRJEB11852	113	human
+feces metagenome	PRJNA983093	111	human
+metagenome	PRJNA880558	111	
+feces metagenome	PRJNA692830	110	human
+feces metagenome	PRJNA902684	109	human
+metagenome	PRJNA999451	109	pig
+gut metagenome	PRJNA892575	109	
+gut metagenome	PRJNA546004	107	
+gut metagenome	PRJNA1164032	106	
+gut metagenome	PRJNA981159	105	
+gut metagenome	PRJNA496479	103	
+gut metagenome	PRJNA847006	102	
+metagenome	PRJNA761116	101	
+metagenome	PRJEB33194	100	
+metagenome	PRJEB26531	100	
+feces metagenome	PRJNA756556	99	human
+feces metagenome	PRJNA947193	99	human
+gut metagenome	PRJNA750063	99	
+metagenome	PRJEB41866	98	
+gut metagenome	PRJEB55125	95	
+gut metagenome	PRJNA1071720	95	
+gut metagenome	PRJNA1121316	95	
+metagenome	PRJEB18041	94	
+manure metagenome	PRJNA853181	91	pig
+metagenome	PRJNA1072081	91	
+gut metagenome	PRJEB22032	90	
+gut metagenome	PRJNA725409	90	
+gut metagenome	PRJNA1092791	90	
+gut metagenome	PRJNA738608	89	human
+feces metagenome	PRJNA385215	88	human
+gut metagenome	PRJNA801755	88	pig
+metagenome	PRJNA861285	87	
+feces metagenome	PRJNA809514	86	human
+metagenome	PRJEB41865	86	
+gut metagenome	PRJEB25210	86	
+gut metagenome	PRJEB42019	85	
+feces metagenome	PRJNA855128	84	human
+metagenome	PRJNA1160072	83	
+gut metagenome	PRJNA389927	83	
+feces metagenome	PRJNA982563	82	pig-associated
+gut metagenome	PRJNA924947	82	
+gut metagenome	PRJNA541010	82	
+feces metagenome	PRJNA471937	81	pig
+metagenome	PRJNA748262	81	
+metagenome	PRJNA750571	81	
+metagenome	PRJNA1045967	81	
+gut metagenome	PRJNA493884	80	
+metagenome	PRJNA1115893	80	
+metagenome	PRJNA733692	80	
+metagenome	PRJNA486782	78	
+metagenome	PRJEB14814	78	
+metagenome	PRJEB4391	78	
+feces metagenome	PRJNA734100	76	pig/other
+metagenome	PRJEB14051	76	
+metagenome	PRJEB28847	75	
+gut metagenome	PRJNA997075	75	
+feces metagenome	PRJNA524170	74	human
+metagenome	PRJEB52722	74	
+metagenome	PRJNA991155	74	
+gut metagenome	PRJNA925857	73	human
+feces metagenome	PRJNA484080	73	pig-associated
+gut metagenome	PRJNA1076911	73	
+gut metagenome	PRJNA727667	71	
+metagenome	PRJEB33756	71	
+metagenome	PRJNA532645	70	
+manure metagenome	PRJNA390250	70	
+gut metagenome	PRJNA379884	70	
+feces metagenome	PRJNA637365	69	human
+gut metagenome	PRJNA723432	69	human
+gut metagenome	PRJNA386502	69	
+metagenome	PRJEB14038	69	
+gut metagenome	PRJNA987743	69	
+gut metagenome	PRJNA702231	68	
+metagenome	PRJNA693652	68	
+metagenome	PRJNA492489	66	pig
+feces metagenome	PRJNA673918	65	human
+metagenome	PRJNA793774	65	human
+gut metagenome	PRJNA733006	65	other
+feces metagenome	PRJNA691978	64	pig/other
+feces metagenome	PRJNA544874	64	
+gut metagenome	PRJNA300602	63	
+metagenome	PRJNA478719	63	
+gut metagenome	PRJNA658422	62	
+feces metagenome	PRJNA511899	61	human
+gut metagenome	PRJEB23147	61	
+gut metagenome	PRJNA526822	61	
+manure metagenome	PRJNA633399	60	pig
+manure metagenome	PRJNA633402	60	pig
+gut metagenome	PRJNA898082	60	
+metagenome	PRJNA1104421	60	
+metagenome	PRJNA784525	59	pig
+metagenome	PRJNA1102991	58	
+gut metagenome	PRJNA824338	57	
+gut metagenome	PRJNA947933	56	human
+gut metagenome	PRJNA602101	56	
+feces metagenome	PRJNA741607	56	
+gut metagenome	PRJEB31742	55	other
+metagenome	PRJNA687411	54	
+gut metagenome	PRJNA524271	54	
+gut metagenome	PRJNA750475	54	
+metagenome	PRJEB21166	54	
+metagenome	PRJNA786485	54	
+gut metagenome	PRJNA831236	52	
+gut metagenome	PRJNA723218	50	other
+metagenome	PRJNA1118426	50	pig
+gut metagenome	PRJNA691978	50	pig/other
+gut metagenome	PRJNA1036590	50	
+gut metagenome	PRJNA754019	49	
+gut metagenome	PRJNA929645	49	
+gut metagenome	PRJNA657455	48	human
+gut metagenome	PRJEB18687	48	
+gut metagenome	PRJNA1035987	48	
+metagenome	PRJEB12083	48	
+gut metagenome	PRJNA822406	47	
+metagenome	PRJNA646752	47	
+gut metagenome	PRJEB13595	46	
+metagenome	PRJNA875377	46	
+gut metagenome	PRJNA667550	45	
+metagenome	PRJNA1177354	45	
+metagenome	PRJNA932130	45	
+gut metagenome	PRJNA642723	45	
+metagenome	PRJNA1085219	44	
+gut metagenome	PRJNA799478	44	
+gut metagenome	PRJEB29323	44	
+gut metagenome	PRJNA941376	43	
+metagenome	PRJEB66265	43	
+gut metagenome	PRJNA1130109	43	
+metagenome	PRJEB33675	43	
+gut metagenome	PRJNA866654	42	
+metagenome	PRJEB6542	42	
+metagenome	PRJNA675502	42	
+gut metagenome	PRJNA955235	41	
+feces metagenome	PRJNA613182	41	
+gut metagenome	PRJNA518912	41	
+metagenome	PRJNA1113194	41	
+gut metagenome	PRJEB12669	41	
+feces metagenome	PRJNA1070846	41	
+gut metagenome	PRJNA471730	41	
+metagenome	PRJNA691897	41	
+metagenome	PRJEB21076	41	
+metagenome	PRJNA675135	40	
+metagenome	PRJNA687536	40	
+metagenome	PRJEB44766	40	
+gut metagenome	PRJNA722397	40	
+metagenome	PRJEB20456	39	
+gut metagenome	PRJNA729051	39	
+metagenome	PRJEB18265	39	
+gut metagenome	PRJNA1088414	38	
+metagenome	PRJNA922352	38	
+metagenome	PRJEB38650	37	
+gut metagenome	PRJNA683158	37	
+manure metagenome	PRJNA662623	36	pig-associated
+gut metagenome	PRJNA942254	36	
+gut metagenome	PRJNA718160	36	
+manure metagenome	PRJNA533779	35	
+gut metagenome	PRJEB21793	35	
+metagenome	PRJNA1047028	35	
+feces metagenome	PRJNA593263	34	human
+feces metagenome	PRJNA983076	34	human
+gut metagenome	PRJNA862629	34	
+metagenome	PRJNA732239	34	
+feces metagenome	PRJNA812583	33	human
+gut metagenome	PRJNA1167935	33	
+gut metagenome	PRJNA1176874	33	
+metagenome	PRJNA1032163	33	
+feces metagenome	PRJNA595610	30	other
+feces metagenome	PRJNA640717	30	pig-associated
+gut metagenome	PRJNA1032029	30	
+metagenome	PRJNA900227	30	
+metagenome	PRJEB15296	29	
+metagenome	PRJEB40824	29	
+gut metagenome	PRJNA436562	28	
+gut metagenome	PRJNA392516	28	
+gut metagenome	PRJEB1391	28	
+gut metagenome	PRJEB29152	28	
+feces metagenome	PRJNA1028770	27	human
+metagenome	PRJNA677897	27	pig-associated
+gut metagenome	PRJEB31009	27	
+gut metagenome	PRJNA695539	27	
+feces metagenome	PRJNA946412	26	human
+gut metagenome	PRJNA436633	26	
+gut metagenome	PRJEB38606	26	
+gut metagenome	PRJNA1067375	26	
+gut metagenome	PRJNA892774	26	
+gut metagenome	PRJNA955400	25	
+gut metagenome	PRJNA827108	25	
+gut metagenome	PRJNA758898	25	
+gut metagenome	PRJNA1073739	25	
+feces metagenome	PRJNA529230	24	human
+metagenome	PRJNA884688	24	
+gut metagenome	PRJNA940850	24	
+metagenome	PRJNA793838	24	
+gut metagenome	PRJNA906124	24	
+gut metagenome	PRJNA964705	24	
+metagenome	PRJEB57214	24	
+metagenome	PRJEB21624	24	
+feces metagenome	PRJNA386422	23	human
+gut metagenome	PRJNA1032714	23	
+feces metagenome	PRJNA821272	23	
+feces metagenome	PRJNA1092107	22	other
+metagenome	PRJNA737178	22	
+gut metagenome	PRJNA888226	21	
+metagenome	PRJNA807808	21	
+gut metagenome	PRJNA303107	21	
+gut metagenome	PRJNA331138	21	
+gut metagenome	PRJNA533038	21	
+metagenome	PRJNA1063243	21	
+gut metagenome	PRJEB61039	21	
+gut metagenome	PRJNA430956	21	
+gut metagenome	PRJNA237795	21	
+feces metagenome	PRJEB42464	20	other
+metagenome	PRJEB39861	20	
+gut metagenome	PRJNA1166717	20	
+metagenome	PRJNA961982	20	
+metagenome	PRJNA646650	20	
+gut metagenome	PRJNA779845	20	
+gut metagenome	PRJNA803517	20	
+feces metagenome	PRJNA861020	19	human
+gut metagenome	PRJNA803065	19	
+gut metagenome	PRJNA725613	19	
+metagenome	PRJEB36405	19	
+metagenome	PRJNA728888	19	
+gut metagenome	PRJNA565268	18	
+gut metagenome	PRJNA588263	18	
+metagenome	PRJEB23207	18	
+feces metagenome	PRJNA1135953	17	human
+gut metagenome	PRJNA779578	17	
+metagenome	PRJNA981221	17	
+gut metagenome	PRJNA1015378	16	pig-associated
+metagenome	PRJNA743541	16	
+feces metagenome	PRJNA777422	16	
+metagenome	PRJEB18679	16	
+metagenome	PRJNA743357	16	
+metagenome	PRJEB48101	16	
+metagenome	PRJEB10064	16	
+feces metagenome	PRJNA986525	16	
+gut metagenome	PRJNA1185313	16	
+gut metagenome	PRJNA910923	16	
+feces metagenome	PRJNA866162	16	
+manure metagenome	PRJNA691721	15	pig
+feces metagenome	PRJNA847183	15	pig
+metagenome	PRJNA842493	15	
+metagenome	PRJNA695407	15	
+metagenome	PRJNA746311	15	
+metagenome	PRJNA507739	15	
+gut metagenome	PRJNA874189	15	
+feces metagenome	PRJNA813004	14	human
+feces metagenome	PRJNA956112	14	other
+gut metagenome	PRJNA877100	14	
+gut metagenome	PRJNA847017	14	
+feces metagenome	PRJEB28161	14	
+metagenome	PRJNA962119	14	
+metagenome	PRJNA973817	14	
+metagenome	PRJNA506137	14	
+metagenome	PRJEB20796	14	
+feces metagenome	PRJNA835973	14	
+gut metagenome	PRJNA821230	14	
+metagenome	PRJNA598014	13	
+gut metagenome	PRJNA813023	13	
+metagenome	PRJEB13595	13	
+metagenome	PRJNA819232	13	
+gut metagenome	PRJNA202380	13	
+gut metagenome	PRJNA714112	13	
+metagenome	PRJEB31632	13	
+gut metagenome	PRJNA1023559	13	
+feces metagenome	PRJNA907943	12	human
+gut metagenome	PRJNA787384	12	
+metagenome	PRJNA604466	12	
+gut metagenome	PRJNA356809	11	pig
+gut metagenome	PRJNA730640	11	
+gut metagenome	PRJNA360177	11	
+feces metagenome	PRJNA769748	11	
+gut metagenome	PRJNA1011517	11	
+gut metagenome	PRJEB33577	11	
+metagenome	PRJEB29731	11	
+metagenome	PRJEB52295	11	
+gut metagenome	PRJNA1006674	11	
+gut metagenome	PRJNA997718	11	
+gut metagenome	PRJNA616396	11	
+feces metagenome	PRJNA730677	10	human
+gut metagenome	PRJNA438436	10	
+gut metagenome	PRJNA573416	10	
+gut metagenome	PRJNA1131161	10	
+gut metagenome	PRJEB43337	10	
+metagenome	PRJNA703034	10	
+gut metagenome	PRJNA785003	10	
+gut metagenome	PRJEB38528	10	
+metagenome	PRJNA698986	10	
+metagenome	PRJNA978509	10	
+feces metagenome	PRJNA1166984	10	
+gut metagenome	PRJNA314806	10	
+gut metagenome	PRJNA774076	10	
+metagenome	PRJNA847951	10	
+feces metagenome	PRJNA1002411	9	human
+feces metagenome	PRJNA1026631	9	human
+feces metagenome	PRJNA557731	9	human
+gut metagenome	PRJNA872758	9	
+gut metagenome	PRJNA785979	9	
+metagenome	PRJEB33338	9	
+metagenome	PRJNA1042834	9	
+feces metagenome	PRJNA694773	9	
+gut metagenome	PRJEB39610	9	
+feces metagenome	PRJNA827933	9	
+gut metagenome	PRJNA904419	9	
+metagenome	PRJNA649958	9	
+gut metagenome	PRJNA478556	9	
+metagenome	PRJNA1130704	9	
+gut metagenome	PRJNA1020557	9	
+feces metagenome	PRJNA1151203	8	human
+feces metagenome	PRJNA491626	8	human
+metagenome	PRJNA472963	8	
+metagenome	PRJNA896917	8	
+metagenome	PRJEB41538	8	
+metagenome	PRJNA844538	8	
+metagenome	PRJEB42466	8	
+gut metagenome	PRJEB20308	8	
+metagenome	PRJEB44146	8	
+metagenome	PRJNA702770	8	
+gut metagenome	PRJNA1067311	8	
+metagenome	PRJEB33889	7	
+metagenome	PRJNA990354	7	
+metagenome	PRJNA749030	7	
+gut metagenome	PRJNA1050885	7	
+gut metagenome	PRJNA765392	7	
+gut metagenome	PRJNA916383	7	
+metagenome	PRJNA1031997	7	
+metagenome	PRJEB21259	7	
+metagenome	PRJNA1042833	7	
+metagenome	PRJNA998844	7	
+metagenome	PRJNA862694	7	
+metagenome	PRJNA944095	7	
+metagenome	PRJEB38909	7	
+feces metagenome	PRJNA723028	6	human
+feces metagenome	PRJNA778925	6	human
+metagenome	PRJNA940122	6	
+gut metagenome	PRJNA999692	6	
+metagenome	PRJNA857474	6	
+gut metagenome	PRJNA858822	6	
+metagenome	PRJEB18557	6	
+feces metagenome	PRJNA564888	5	human
+feces metagenome	PRJNA750156	5	human
+feces metagenome	PRJNA856821	5	human
+gut metagenome	PRJNA932960	5	
+metagenome	PRJNA971778	5	
+metagenome	PRJEB11419	5	
+gut metagenome	PRJNA340486	5	
+gut metagenome	PRJNA741606	5	
+gut metagenome	PRJNA1046298	5	
+metagenome	PRJNA950991	5	
+metagenome	PRJEB41222	5	
+gut metagenome	PRJNA427653	5	
+feces metagenome	PRJNA474710	5	
+gut metagenome	PRJNA936782	5	
+gut metagenome	PRJNA891875	5	
+metagenome	PRJEB57859	5	
+metagenome	PRJNA663717	5	
+metagenome	PRJEB37430	5	
+metagenome	PRJEB29504	4	
+metagenome	PRJNA1168703	4	
+metagenome	PRJEB30264	4	
+gut metagenome	PRJNA340485	4	
+gut metagenome	PRJNA565171	4	
+metagenome	PRJNA682610	4	
+gut metagenome	PRJNA340484	4	
+metagenome	PRJNA1099934	4	
+metagenome	PRJNA918527	4	
+gut metagenome	PRJNA1137132	4	
+gut metagenome	PRJNA849257	4	
+gut metagenome	PRJEB58787	4	
+metagenome	PRJEB46763	4	
+metagenome	PRJNA730932	4	
+gut metagenome	PRJNA999587	4	
+metagenome	PRJNA883728	4	
+metagenome	PRJEB34458	4	
+gut metagenome	PRJNA752224	4	
+feces metagenome	PRJNA446061	3	human
+feces metagenome	PRJNA658643	3	human
+bacterium	PRJNA763692	3	human
+feces metagenome	PRJNA884830	3	human
+metagenome	PRJNA999488	3	
+metagenome	PRJEB49339	3	
+gut metagenome	PRJNA833654	3	
+manure metagenome	PRJNA1113660	3	
+metagenome	PRJNA595749	3	
+metagenome	PRJNA477357	3	
+metagenome	PRJEB46131	3	
+metagenome	PRJNA472818	3	
+gut metagenome	PRJNA1095634	3	
+gut metagenome	PRJNA834577	3	
+metagenome	PRJNA1010388	3	
+metagenome	PRJEB40903	3	
+gut metagenome	PRJNA1016439	3	
+metagenome	PRJNA1090236	3	
+metagenome	PRJEB34573	3	
+gut metagenome	PRJNA1177199	3	
+gut metagenome	PRJNA955930	3	
+gut metagenome	PRJNA340487	3	
+metagenome	PRJNA916364	3	
+gut metagenome	PRJNA1018682	3	
+metagenome	PRJNA1115109	3	
+metagenome	PRJNA812891	3	
+gut metagenome	PRJNA345227	3	
+gut metagenome	PRJNA853174	3	
+metagenome	PRJNA689808	3	
+metagenome	PRJEB50408	3	
+metagenome	PRJNA1065951	3	
+metagenome	PRJNA997821	3	
+gut metagenome	PRJNA340483	3	
+gut metagenome	PRJNA590085	3	
+feces metagenome	PRJNA894152	2	human
+gut metagenome	PRJNA317576	2	
+metagenome	PRJEB20586	2	
+gut metagenome	PRJNA240141	2	
+metagenome	PRJEB6972	2	
+metagenome	PRJEB22775	2	
+gut metagenome	PRJNA1071073	2	
+gut metagenome	PRJNA214227	2	
+gut metagenome	PRJNA366591	2	
+manure metagenome	PRJNA964586	2	
+gut metagenome	PRJNA821923	2	
+gut metagenome	PRJNA758357	2	
+metagenome	PRJNA825695	2	
+metagenome	PRJNA497508	2	
+gut metagenome	PRJNA631602	2	
+gut metagenome	PRJNA1113545	2	
+gut metagenome	PRJNA730942	2	
+unidentified	PRJEB38174	2	
+gut metagenome	PRJNA988023	2	
+metagenome	PRJNA761533	2	
+gut metagenome	PRJNA933244	2	
+gut metagenome	PRJNA1161368	2	
+metagenome	PRJNA975618	2	
+gut metagenome	PRJNA586865	2	
+metagenome	PRJNA997801	2	
+metagenome	PRJNA908759	2	
+metagenome	PRJEB29020	2	
+metagenome	PRJNA693684	2	
+feces metagenome	PRJEB46212	1	human
+feces metagenome	PRJNA657304	1	human
+feces metagenome	PRJNA772288	1	human
+feces metagenome	PRJNA772888	1	human
+feces metagenome	PRJNA848116	1	human
+metagenome	PRJEB47746	1	
+metagenome	PRJNA913821	1	
+metagenome	PRJEB16317	1	
+metagenome	PRJNA985904	1	
+gut metagenome	PRJNA630144	1	
+metagenome	PRJNA940065	1	
+gut metagenome	PRJNA545214	1	
+gut metagenome	PRJNA397450	1	
+gut metagenome	PRJNA590979	1	
+feces metagenome	PRJNA738554	1	
+metagenome	PRJNA761454	1	
+gut metagenome	PRJNA725899	1	
+gut metagenome	PRJNA1012006	1	
+metagenome	PRJNA905698	1	
+gut metagenome	PRJNA601318	1	
+gut metagenome	PRJNA340523	1	
+metagenome	PRJNA934363	1	
+gut metagenome	PRJNA271618	1	
+gut metagenome	PRJNA386503	1	
+metagenome	PRJEB15519	1	
+metagenome	PRJNA865096	1	
+feces metagenome	PRJNA343008	1	
+metagenome	PRJNA844179	1	
+gut metagenome	PRJNA340489	1	
+gut metagenome	PRJNA835321	1	
+metagenome	PRJNA719719	1	
+gut metagenome	PRJNA366460	1	
+metagenome	PRJEB18115	1	
+manure metagenome	PRJNA843911	1	
+gut metagenome	PRJNA366463	1	
+gut metagenome	PRJNA297579	1	
+metagenome	PRJNA608645	1	
+metagenome	PRJNA1134639	1	
+metagenome	PRJNA477326	1	
+metagenome	PRJNA749165	1	
+manure metagenome	PRJNA948024	1	
+gut metagenome	PRJEB44685	1	
+gut metagenome	PRJNA340490	1	
